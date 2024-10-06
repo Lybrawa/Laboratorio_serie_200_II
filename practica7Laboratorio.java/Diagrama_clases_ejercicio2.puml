@@ -1,0 +1,9 @@
+@startuml Diagrama_clases_ejercicio2
+class Vehiculo {
+    - marca: String
+    + Vehiculo (marca: String)
+}
+class Coche extends Vehiculo{
+    - numeroPuertas: int
+    + Coche (marca: String, numeroPuertas: int)
+}

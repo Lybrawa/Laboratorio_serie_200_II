@@ -1,0 +1,18 @@
+@startuml Diagrama_clases_ejercicio3
+class SaldoInsuficienteException extends Exception {
+    + SaldoInsuficienteException(mensaje: String)
+}
+class LimiteSobregiroExcedidoException extends Exception {
+    + LimiteSobregiroExcedidoException(mensaje: String)
+}
+class CuentaBancaria{
+    - saldo: double
+    + CuentaBancaria (saldo: double)
+    + depositar (cantidad: double): void
+    + retirar (cantidad: double): void
+}
+class CuentaCorriente extends CuentaBancaria{
+    - LimiteSobregiro: double
+    + CuentaCorriente (saldo: double, LimiteSobregiro: double)
+    + retirar (cantidad: double): void
+}

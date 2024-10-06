@@ -1,0 +1,12 @@
+@startuml Diagrama_clases_ejercicio1
+
+class Persona {
+    + saludar (): String
+}
+class Estudiante extends Persona{
+    - nombre: String
+    + Estudiante (nombre: String)
+    + saludar (): String
+    + saludar (nombreOtraPersona: String): String
+}
+@enduml
